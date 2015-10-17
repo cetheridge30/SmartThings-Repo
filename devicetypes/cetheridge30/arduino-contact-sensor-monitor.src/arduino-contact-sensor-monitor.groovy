@@ -11,8 +11,8 @@ metadata {
         
         fingerprint profileId: "0104", deviceId: "0138", inClusters: "0000"
         
-        capability "Sensor"
-        capability "Contact Sensor"
+        // capability "Sensor"
+        // capability "Contact Sensor"
 
         attribute "office",   "string"
         attribute "diningroom",  "string"
