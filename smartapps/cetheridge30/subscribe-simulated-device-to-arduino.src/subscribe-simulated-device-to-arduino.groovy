@@ -28,7 +28,7 @@ definition(
 )
 
 preferences {
-	section("Select arduino that parent sensor is connected to.") {
+	section("Select arduino that sensors are connected to.") {
 		input "arduino", "capability.contactSensor", title: "Select...", required: true
     }
 	section("Select the simulated sensor you would like to attach to Office Windows.") {
