@@ -278,14 +278,18 @@ void messageCallout(String message)
     Serial.println("' ");
   }
 
-//  if(message.equals("pushLeft"))
-//  {
-//    pushLeft();
-//  }
-//  else if(message.equals("pushRight"))
-//  {
-//    pushRight();
-//  }
+  if(message.equals("poll"))
+  {
+    // if asked for polling update then force update by setting all devices to unknown.
+    officeStatus  = UNKNOWN;
+    diningRoomStatus = UNKNOWN;
+    bedroomStatus = UNKNOWN;
+    livingRoomStatus = UNKNOWN;
+    kitchenStatus = UNKNOWN;
+    frontDoorStatus = UNKNOWN;
+    backDoorStatus = UNKNOWN;
+    garageDoorStatus = UNKNOWN;
+  }
 
   smartthing.shieldSetLED(0, 0, 0); // off
 }
