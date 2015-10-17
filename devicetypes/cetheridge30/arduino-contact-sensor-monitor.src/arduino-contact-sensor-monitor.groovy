@@ -11,7 +11,6 @@ metadata {
         
         fingerprint profileId: "0104", deviceId: "0138", inClusters: "0000"
         
-        capability "Switch"
         capability "Sensor"
         capability "Contact Sensor"
 
@@ -24,8 +23,8 @@ metadata {
         attribute "backdoor",  "string"
         attribute "garagedoor", "string"
 
-        // command "pushLeft"
-        // command "pushRight"
+        command "poll"
+
     }
 
     simulator {
@@ -106,13 +105,9 @@ def parse(String description) {
     return result
 }
 
-//def pushLeft() {
-//    log.debug "Left Button pressed"
-//    zigbee.smartShield(text: "pushLeft").format()
-//}
+def poll() {
+    log.debug "Polling requested"
+    zigbee.smartShield(text: "poll").format()
+}
 
-//def pushRight() {
-//    log.debug "Right Button pressed"
-//    zigbee.smartShield(text: "pushRight").format()
-//}
 
