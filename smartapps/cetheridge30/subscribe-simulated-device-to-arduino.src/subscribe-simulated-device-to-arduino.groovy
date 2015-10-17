@@ -60,6 +60,8 @@ preferences {
 def installed()
 {   
 	subscribe()
+    log.debug "Sending poll to update status on inital install"
+    arduino.poll()
 }
 
 def updated()
@@ -91,107 +93,75 @@ def subscribe()
  }
 
 def officeOpenHandler(evt) {
-	log.debug evt.name
-    log.debug evt.value
     log.debug "arduinoevent($evt.name: $evt.value: $evt.deviceId)"
     office.open()
 }
 
 def officeClosedHandler(evt) {
-	log.debug evt.name
-    log.debug evt.value
     log.debug "arduinoevent($evt.name: $evt.value: $evt.deviceId)"
     office.close()
 }
 
 def diningroomOpenHandler(evt) {
-	log.debug evt.name
-    log.debug evt.value
     log.debug "arduinoevent($evt.name: $evt.value: $evt.deviceId)"
     diningroom.open()
 }
 
 def diningroomClosedHandler(evt) {
-	log.debug evt.name
-    log.debug evt.value
     log.debug "arduinoevent($evt.name: $evt.value: $evt.deviceId)"
     diningroom.close()
 }
 def bedroomOpenHandler(evt) {
-	log.debug evt.name
-    log.debug evt.value
     log.debug "arduinoevent($evt.name: $evt.value: $evt.deviceId)"
     bedroom.open()
 }
 
 def bedroomClosedHandler(evt) {
-	log.debug evt.name
-    log.debug evt.value
     log.debug "arduinoevent($evt.name: $evt.value: $evt.deviceId)"
     bedroom.close()
 }
 def livingroomOpenHandler(evt) {
-	log.debug evt.name
-    log.debug evt.value
     log.debug "arduinoevent($evt.name: $evt.value: $evt.deviceId)"
     livingroom.open()
 }
 
 def livingroomClosedHandler(evt) {
-	log.debug evt.name
-    log.debug evt.value
     log.debug "arduinoevent($evt.name: $evt.value: $evt.deviceId)"
     livingroom.close()
 }
 def kitchenOpenHandler(evt) {
-	log.debug evt.name
-    log.debug evt.value
     log.debug "arduinoevent($evt.name: $evt.value: $evt.deviceId)"
     kitchen.open()
 }
 
 def kitchenClosedHandler(evt) {
-	log.debug evt.name
-    log.debug evt.value
     log.debug "arduinoevent($evt.name: $evt.value: $evt.deviceId)"
     kitchen.close()
 }
 def frontdoorOpenHandler(evt) {
-	log.debug evt.name
-    log.debug evt.value
     log.debug "arduinoevent($evt.name: $evt.value: $evt.deviceId)"
     frontdoor.open()
 }
 
 def frontdoorClosedHandler(evt) {
-	log.debug evt.name
-    log.debug evt.value
     log.debug "arduinoevent($evt.name: $evt.value: $evt.deviceId)"
     frontdoor.close()
 }
 def backdoorOpenHandler(evt) {
-	log.debug evt.name
-    log.debug evt.value
     log.debug "arduinoevent($evt.name: $evt.value: $evt.deviceId)"
     backdoor.open()
 }
 
 def backdoorClosedHandler(evt) {
-	log.debug evt.name
-    log.debug evt.value
     log.debug "arduinoevent($evt.name: $evt.value: $evt.deviceId)"
     backdoor.close()
 }
 def garagedoorOpenHandler(evt) {
-	log.debug evt.name
-    log.debug evt.value
     log.debug "arduinoevent($evt.name: $evt.value: $evt.deviceId)"
     garagedoor.open()
 }
 
 def garagedoorClosedHandler(evt) {
-	log.debug evt.name
-    log.debug evt.value
     log.debug "arduinoevent($evt.name: $evt.value: $evt.deviceId)"
     garagedoor.close()
 }
