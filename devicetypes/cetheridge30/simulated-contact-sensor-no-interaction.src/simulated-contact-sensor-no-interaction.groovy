@@ -14,7 +14,9 @@ metadata {
 	// Automatically generated. Make future change here.
 	definition (name: "Simulated Contact Sensor - No interaction", namespace: "cetheridge30", author: "Christopher Etheridge") {
 		capability "Contact Sensor"
-
+		
+        command "open"
+		command "close"
 	}
 
 	simulator {
